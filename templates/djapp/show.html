@@ -1,3 +1,5 @@
+
+{% extends 'djapp/base.html' %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +10,12 @@
     <title>SHOW</title>
 </head>
 <body>
+  {% block title_block%}
+  <h1 class="text-center">STUDENT INFORMATION</h1>
+  {% endblock %}
+
+  {% block main_block %}
+
   <div class="card text-center m-4">
     <h1 class="text-center">Student Data</h1>
     <h2>Student ID is : {{ st.id }} </h2> 
@@ -26,5 +34,9 @@
 
     <a style="width: 150px; margin-left: 800px;"  class="btn btn-success" href="{% url 'home'  %}"> back home</a>
 </div>
+
+  {% endblock %}
+
+  
 </body>
 </html>
